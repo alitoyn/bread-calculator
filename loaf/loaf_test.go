@@ -2,7 +2,7 @@ package loaf
 
 import (
 	"fmt"
-    "testing"
+	"testing"
 )
 
 func TestLoaf(t *testing.T) {

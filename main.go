@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"flag"
+	"fmt"
 
 	"github.com/alitoyn/bread-calculator/loaf"
 )
@@ -10,9 +10,7 @@ import (
 var defaultFlour = 500.0
 
 func main() {
-
 	flourAmount := flag.Float64("flour", 0.0, "a float for flour")
-
 	flag.Parse()
 
 	if *flourAmount == 0.0 {
@@ -21,6 +19,5 @@ func main() {
 	}
 
 	loaf := loaf.CalculteRatioFromFlour(*flourAmount, loaf.BasicLoafRatio)
-
 	fmt.Printf("%+v\n", loaf)
 }
