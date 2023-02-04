@@ -11,6 +11,10 @@ func Build() error {
 	return sh.Run("go", "build", ".")
 }
 
+func BuildArm() error {
+	return sh.RunWith(map[string]string{"GOARCH": "arm"}, "go", "build", ".")
+}
+
 func Test() error {
 	output, err := sh.Output("go", "test", "./...")
 	if err != nil {
